@@ -1,0 +1,42 @@
+<div id="header" class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div id="logo" class="container-fluid d-flex align-items-center">
+        <h3 class="me-3 text-primary" [routerLink]="['/user']" (click)="clearSearch()">
+            Walmart
+        </h3>
+        <input type="text" name="search" class="form-control w-50" placeholder="Search for products"
+            [(ngModel)]="searchText" />
+        <button class="btn btn-outline-primary m-2" (click)="GoToSearch()">
+            Search
+        </button>
+
+        <div class="ms-auto">
+            <button class="btn btn-outline-primary me-2" (click)="clearSearch()" [routerLink]="['profile']">
+                Profile
+            </button>
+            <button class="btn btn-primary" (click)="clearSearch()" [routerLink]="['cart']">
+                Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Display fetched products -->
+
+<div class="container mt-3" *ngIf="products.length > 0">
+    <h5>Search Results:</h5>
+    <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let item of products">
+            <div class="card shadow-sm">
+                <img [src]="item.imageUrl" class="card-img-top" [alt]="item.prdName" />
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.prdName }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+                    <p class="card-text text-primary fw-bold">$ {{ item.prdPrice }}</p>
+                    <button class="btn btn-primary w-100" (click)="AddToCart(item.prdId)">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
