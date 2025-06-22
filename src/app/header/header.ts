@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router , RouterModule} from '@angular/router';
 import { ProductService } from '../services/product.service';
-
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
-  standalone: false,
+  imports: [FormsModule, CommonModule, RouterModule],
+  standalone: true,
   templateUrl: './header.html',
   styleUrl: './header.css'
 })
