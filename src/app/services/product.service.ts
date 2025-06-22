@@ -9,7 +9,26 @@ export class ProductService {
   private baseUrl: string = 'http://localhost:3000/products';
 
   constructor(private http: HttpClient) {}
-
+  getProducts(category: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/api/Products/ByCategory`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      params: {
+        category: category
+      }
+    });
+  }
+  getProfile(userEmail: string): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/api/Users/GetUserByEmail`, {
+      headers: {
+        'Content-Type': 'application/json'
+      },
+        params: {
+            email: userEmail
+        }
+    });
+  }
   getProductByName(searchText: string): Observable<any[]> {
 
     return this.http.get<any>(`${this.baseUrl}/api/products/ByName`,{
@@ -33,6 +52,13 @@ export class ProductService {
 
     getCartItems(userEmail: string): Observable<any[]> {
         return this.http.get<any>(`${this.baseUrl}/api/cart/GetCartItemsByEmail/${userEmail}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    }
+    removeFromCart(productId: number): Observable<any> {
+        return this.http.delete<any>(`${this.baseUrl}/api/cart/RemoveFromCart/${productId}`, {
             headers: {
                 'Content-Type': 'application/json'
             }
