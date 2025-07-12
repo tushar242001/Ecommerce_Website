@@ -1,1 +1,13 @@
-<p>top-selling works!</p>
+<div class="container m-2">
+    <div class="row m-3">
+        <div class="col-md-3 mb-4" *ngFor="let product of products | slice:0:8">
+            <div class="card shadow-sm" (click)="openProductDialog(product)">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.prdName }}</h5>
+                    <p class="card-text">{{ product.description}}</p>
+                    <button class="btn btn-primary w-100" (click)="AddtoCart(product.prdId)">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
