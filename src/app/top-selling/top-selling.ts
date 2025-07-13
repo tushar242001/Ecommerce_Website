@@ -2,10 +2,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../services/product.service';
 import { ProductDialog } from '../product-dialog/product-dialog';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-top-selling',
-  imports: [],
+  imports: [CommonModule,RouterModule],
   templateUrl: './top-selling.html',
   styleUrl: './top-selling.css'
 })
@@ -18,6 +20,10 @@ export class TopSelling implements OnInit ,OnDestroy {
   constructor(private productService: ProductService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
+    this.fetchProducts();
+  }
+
+  openProductDialog(product:any){
     this.dialog.open(ProductDialog,{
       data: this.productService,
       width: '400px',

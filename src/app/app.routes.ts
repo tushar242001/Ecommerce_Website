@@ -19,7 +19,7 @@ export const routes: Routes = [
     { path: 'registeruser', component: RegisterUser },
     {
         path: 'user',
-        component: User , canActivate: [AuthguardService],
+        component: User ,
         children: [
             { path: 'cart', component: Cart},
             { path: '', component: Main},
@@ -31,5 +31,6 @@ export const routes: Routes = [
             { path: ' books', component: Books},
             { path: 'category', component:CategoryList},
             { path: 'profile', component: Profile} ]
-    }
+    },
+    { path: '**', redirectTo: '/login'},
 ];
