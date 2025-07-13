@@ -1,22 +1,183 @@
+/* --- Provided base styles --- */
 #header {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color:#f8f9fa;
-    border: 1px solid #dee2e6;
+    background: linear-gradient(90deg, #e3f0ff 0%, #f8fafc 100%);
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
 }
 
 #logo {
     display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 #logo h3 {
     font-weight: bold;
+    font-size: 2rem;
+    color: #1976d2;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#logo h3:hover {
+    color: #1565c0;
+    text-decoration: underline;
 }
 
 input[name="search"] {
     border-radius: 20px;
-    padding: 10px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border: 1.5px solid #1976d2;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    margin-right: 8px;
+    width: 50%;
+}
+
+input[name="search"]:focus {
+    border-color: #1565c0;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.12);
+    outline: none;
+}
+
+/* --- Button styles --- */
+.btn {
+    border-radius: 24px;
+    font-weight: 600;
+    padding: 8px 22px;
+    font-size: 1rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn-outline-primary {
+    border: 1.5px solid #1976d2;
+    color: #1976d2;
+    background: #fff;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background: #1976d2;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: linear-gradient(90deg, #1565c0 0%, #1976d2 100%);
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+}
+
+.ms-auto {
+    margin-left: auto !important;
+    display: flex;
+    gap: 10px;
+}
+
+.me-2 {
+    margin-right: 0.5rem !important;
+}
+
+.m-2 {
+    margin: 0.5rem !important;
+}
+
+/* --- Search results section --- */
+.container.mt-3 {
+    margin-top: 2rem !important;
+}
+
+.card.shadow-sm {
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+    border: none;
+    transition: box-shadow 0.2s;
+}
+
+.card.shadow-sm:hover {
+    box-shadow: 0 8px 32px rgba(25, 118, 210, 0.15);
+}
+
+.card-img-top {
+    border-radius: 14px 14px 0 0;
+    height: 180px;
+    object-fit: cover;
+    background: #f8fafc;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1976d2;
+    margin-bottom: 8px;
+}
+
+.card-text {
+    font-size: 0.98rem;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.card-text.text-primary {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1976d2 !important;
+    margin-bottom: 10px;
+}
+
+.btn.w-100 {
+    border-radius: 24px;
+    font-weight: 600;
+    padding: 10px 0;
+    font-size: 1rem;
+    background: linear-gradient(90deg, #1976d2 0%, #2196f3 100%);
+    border: none;
+    color: #fff;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+
+.btn.w-100:hover,
+.btn.w-100:focus {
+    background: linear-gradient(90deg, #1565c0 0%, #1976d2 100%);
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 900px) {
+    #header {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px 8px;
+    }
+    #logo {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    input[name="search"] {
+        width: 100% !important;
+        margin-right: 0;
+    }
+    .btn,
+    .btn-outline-primary,
+    .btn-primary {
+        width: 100%;
+        margin: 6px 0;
+    }
+    .ms-auto {
+        flex-direction: column;
+        gap: 6px;
+        margin-left: 0 !important;
+    }
 }

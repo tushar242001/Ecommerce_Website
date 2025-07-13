@@ -1,0 +1,75 @@
+/* Page background */
+body, .main-bg {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f8fafc 0%, #e3f0ff 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Main container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(67, 206, 162, 0.10), 0 1.5px 4px rgba(0,0,0,0.04);
+}
+
+/* Centered section */
+.text-center {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Welcome heading */
+.text-primary {
+    color: #1976d2;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Lead paragraph */
+.lead {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 18px;
+}
+
+/* Category list styling */
+app-category-list {
+    display: block;
+    margin: 0 auto 24px auto;
+}
+
+/* Top selling section */
+.container2 {
+    margin-top: 32px;
+    padding: 24px 16px;
+    background: linear-gradient(90deg, #e3f0ff 0%, #f8fafc 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.06);
+}
+
+.container2 h3 {
+    margin-bottom: 18px;
+    font-size: 1.3rem;
+    color: #1976d2;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .container {
+        padding: 16px 4px;
+        max-width: 98vw;
+    }
+    .container2 {
+        padding: 12px 4px;
+    }
+    .text-center h2 {
+        font-size: 1.3rem;
+    }
+    .container2 h3 {
+        font-size: 1.1rem;
+    }
+}

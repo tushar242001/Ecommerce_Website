@@ -1,5 +1,5 @@
-export class RegisterUser {
-    public eusername: string = '';
+export class RegisterUsers {
+    public euserName: string = '';
     public Email: string = '';
     public Password: string = '';
     public euserPhone: string = '';
