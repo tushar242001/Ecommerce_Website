@@ -1,0 +1,106 @@
+/* Sliding container styles */
+
+.sliding-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 53vh;
+}
+
+.sliding-track {
+    display: flex;
+    width: max-content;
+    animation: slide-left 25s linear infinite;
+    transition: 0.1s ease;
+    /* Smooth transition for sliding effect */
+    transform: translatex(0%);
+}
+
+.sliding-item button {
+    display: flex;
+    font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 250px;
+    width: 300px;
+    padding: 8px;
+    /* Reduced padding */
+    margin: 5px;
+    /* Reduced margin */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+#books {
+background-image: url('../Images/books.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* Center the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+#toys {
+background-image: url('../Images/Toys.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* Center the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+#Electronics
+{
+background-image: url('../Images/Electronics.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* enter the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+#Clothing {
+background-image: url('../Images/Clothes.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* Center the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+#homeappliances {
+background-image: url('../Images/homeappliances.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* Center the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+#furniture {
+background-image: url('../Images/Furniture.png');
+/* Add background image */
+background-size: cover;
+/* Ensure the image covers the button */
+background-position: center;
+/* Center the image */
+background-repeat: no-repeat;
+/* Prevent the image from repeating */
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

@@ -1,1 +1,62 @@
-<p>category-list works!</p>
+<div class="sliding-container">
+    <div class="sliding-track">
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['books']" id="books"></button>
+            <h3>Books</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['clothing']" id="Clothing"></button>
+            <h3>Clothing</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['electronics']" id="Electronics"></button>
+            <h3>Electronics</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['homeappliances']" id="homeappliances"></button>
+            <h3>Home Appliances</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['homefurniture']" id="furniture"></button>
+            <h3>Home & Furniture</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['toys']" id="toys"></button>
+            <h3>Toys</h3>
+        </div>
+
+        <!-- Duplicate items for looping effect -->
+
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['books']" id="books"></button>
+            <h3>Books</h3>
+        </div>
+
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['clothing']" id="Clothing"></button>
+            <h3>Clothing</h3>
+        </div>
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['electronics']"></button>
+            <h3>Electronics</h3>
+        </div>
+
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['homeappliances']" id="homeappliances"></button>
+            <h3>Home Appliances</h3>
+        </div>
+
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['homefurniture']" id="furniture"></button>
+            <h3>Home & Furniture</h3>
+        </div>
+
+        <div class="sliding-item">
+            <button class="mt-2" [routerLink]="['toys']"></button>
+            <h3>Toys</h3>
+        </div>
+    </div>
+</div>
+<div>
+    <router-outlet></router-outlet>
+</div>
